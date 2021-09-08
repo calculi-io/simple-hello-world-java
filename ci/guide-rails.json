@@ -82,7 +82,12 @@
 				"post_deployment_actions": {
 					"loadbalancer": {}
 				},
-				"cache_info": {},
+				"cache_info": {
+					"enabled": true,
+					"paths": [
+						"((maven.repo.local))"
+					]
+				},
 				"tasks": [
 					{
 						"name": "simple-hello-world-java",
@@ -96,25 +101,19 @@
 							{
 								"name": "build",
 								"definition": "build",
-								"command": "mvn compile\n",
+								"command": "mvn compile -Dmaven.repo.local=((maven.repo.local))\n",
 								"properties": null
 							},
 							{
 								"name": "test",
 								"definition": "test",
-								"command": "mvn surefire-report:report \n\nmvn cobertura:cobertura  -Dcobertura.report.format=xml  -Dcobertura.aggregate=true install -e",
+								"command": "mvn surefire-report:report -Dmaven.repo.local=((maven.repo.local))\n\nmvn cobertura:cobertura  -Dcobertura.report.format=xml  -Dcobertura.aggregate=true install -e",
 								"properties": null
 							},
 							{
 								"name": "create jar",
 								"definition": "create jar",
 								"command": "echo \"application version ${APPLICATION_VERSION}\"\nmvn versions:set -DnewVersion=${APPLICATION_VERSION}\nmvn package",
-								"properties": null
-							},
-							{
-								"name": "list ",
-								"definition": "list ",
-								"command": "ls -R",
 								"properties": null
 							}
 						],

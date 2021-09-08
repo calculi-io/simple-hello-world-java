@@ -101,13 +101,13 @@
 							{
 								"name": "build",
 								"definition": "build",
-								"command": "mvn compile -Dmaven.repo.local=((maven.repo.local))\n",
+								"command": "mvn compile\n",
 								"properties": null
 							},
 							{
 								"name": "test",
 								"definition": "test",
-								"command": "mvn surefire-report:report -Dmaven.repo.local=((maven.repo.local))\n\nmvn cobertura:cobertura  -Dcobertura.report.format=xml  -Dcobertura.aggregate=true install -e",
+								"command": "mvn surefire-report:report\n\nmvn cobertura:cobertura  -Dcobertura.report.format=xml  -Dcobertura.aggregate=true install -e",
 								"properties": null
 							},
 							{

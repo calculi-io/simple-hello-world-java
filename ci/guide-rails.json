@@ -47,6 +47,13 @@
 						"code_analysis": null
 					}
 				},
+				"properties": [
+					{
+						"name": "maven.repo.local",
+						"value": "${SEGMENT_BASE_DIR}/cache/.m2",
+						"type": "string"
+					}
+				],
 				"deployment_strategy": {
 					"canary_watch_time": "",
 					"update_watch_time": "",

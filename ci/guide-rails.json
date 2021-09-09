@@ -274,6 +274,7 @@
 						]
 					}
 				],
+				"gated": true,
 				"post_deployment_actions": {
 					"loadbalancer": {}
 				},

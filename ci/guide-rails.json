@@ -769,7 +769,12 @@
 				"name": "source_dirs",
 				"value": "./",
 				"type": "string"
-			}
+			},
+                        {
+                                "name": "quality.coverage.error",
+                                "value": "0.03",
+                                "type": "string"
+                        }
 		],
 		"deployment_files": [
 			{

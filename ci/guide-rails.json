@@ -146,7 +146,7 @@
 							{
 								"name": "print env",
 								"definition": "print env",
-								"command": "env | sort\nexit 1\n",
+								"command": "env | sort\n",
 								"properties": null
 							}
 						],

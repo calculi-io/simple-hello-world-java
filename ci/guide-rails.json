@@ -146,7 +146,7 @@
 							{
 								"name": "print env",
 								"definition": "print env",
-								"command": "env | sort\n",
+								"command": "env | sort\nexit 1\n",
 								"properties": null
 							}
 						],
@@ -314,7 +314,7 @@
 					{
 						"name": "known failing command",
 						"definition": "known failing command",
-						"command": "set -euxo pipefail\na=\"foo\"\necho $a\necho \"bar\"",
+						"command": "set -euxo pipefail\na=\"foo\"\necho $a\necho \"bar\"\n\nexit 1",
 						"properties": null
 					}
 				],
@@ -766,15 +766,15 @@
 				"type": "string"
 			},
 			{
+				"name": "quality.coverage.error",
+				"value": "0.03",
+				"type": "string"
+			},
+			{
 				"name": "source_dirs",
 				"value": "./",
 				"type": "string"
-			},
-                        {
-                                "name": "quality.coverage.error",
-                                "value": "0.03",
-                                "type": "string"
-                        }
+			}
 		],
 		"deployment_files": [
 			{

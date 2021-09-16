@@ -856,7 +856,7 @@
 				"name": "emitter",
 				"image": {
 					"name": "docker-registry.query.consul:443/guide-rails-emitter",
-					"version": "1.0.4",
+					"version": "1.0.5",
 					"location": "docker-registry.service.consul:443"
 				}
 			},

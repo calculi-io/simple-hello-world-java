@@ -98,6 +98,7 @@
 				"tasks": [
 					{
 						"name": "simple-hello-world-java",
+						"run_after": [],
 						"steps": [
 							{
 								"name": "print env",
@@ -128,6 +129,9 @@
 					},
 					{
 						"name": "print-echo",
+						"run_after": [
+							"simple-hello-world-java"
+						],
 						"steps": [
 							{
 								"name": "print echo",

@@ -128,9 +128,43 @@
 						"docker_options": {}
 					},
 					{
-						"name": "print-echo",
+						"name": "child-level-1-parallel-1",
 						"run_after": [
 							"simple-hello-world-java"
+						],
+						"steps": [
+							{
+								"name": "print child-level-1-parallel-1",
+								"definition": "print echo",
+								"command": "echo \"i'm level 1 task, run after simple-hello-world-java\" \n",
+								"properties": null
+							}
+						],
+						"docker_options": {
+							"repository": "node:10"
+						}
+					},
+					{
+						"name": "child-level-1-parallel-2",
+						"run_after": [
+							"simple-hello-world-java"
+						],
+						"steps": [
+							{
+								"name": "print-child-parallel-2",
+								"definition": "",
+								"command": "echo \"i'm level 2 task, run after simple-hello-world-java --> child-level-1-parallel-1\" \n",
+								"properties": null
+							}
+						],
+						"docker_options": {
+							"repository": "node:10"
+						}
+					},
+					{
+						"name": "child-level-2",
+						"run_after": [
+							"child-level-1-parallel-2"
 						],
 						"steps": [
 							{

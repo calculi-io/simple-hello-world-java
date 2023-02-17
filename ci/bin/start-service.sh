@@ -21,3 +21,4 @@ else
     echo "Deployment did not complete in 5 attempts, exiting"
     exit 1
 fi
+
